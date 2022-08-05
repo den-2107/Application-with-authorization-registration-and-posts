@@ -1,18 +1,14 @@
-// import HomePage from 'pages/HomePage';
-// import LoginPage from 'pages/LoginPage';
-// import RegisterPage from 'pages/RegisterPage';
-// import {Switch, Route} from 'react-router-dom'
-import Cards from '../Cards/Cards';
+import React from "react";
+import Card from "../Card/Card";
+import Header from "../Header/Header";
 
 function App() {
   return (
-    // <Switch>
-    //   <Route exact path="/" component={HomePage} />
-    //   <Route exact path="/login" component={LoginPage} />
-    //   <Route exact path="/register" component={RegisterPage} />
-    // </Switch>
+    <>
+      <Header />
+      <Card />
+    </>
 
-    <Cards/>
   );
 }
 

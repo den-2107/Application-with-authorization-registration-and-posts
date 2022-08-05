@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import styles from './Card.module.css';
 
-const Cards = () => {
+const Card = () => {
     const [posts, setPosts] = useState([]);
     const [users, setUsers] = useState([]);
     const [photos, setPhotos] = useState([])
@@ -40,10 +41,10 @@ const Cards = () => {
       return (<p>Loading...</p>)
 
     return (
-        <div>
+        <div className={styles.container}>
           {posts.map(post => (
             <div key={post.id}>
-              <img alt='' src={photos.find(photo => photo.albumId === post.userId).url} />
+              <img className={styles.userImage} alt='' src={photos.find(photo => photo.albumId === post.userId)?.url} />
               <h1>{users.find(user => user.id === post.userId)?.name}</h1>
               <h2>{post.title}</h2>
               <p>{post.body}</p>
@@ -53,4 +54,4 @@ const Cards = () => {
       );
 };
 
-export default Cards;
+export default Card;

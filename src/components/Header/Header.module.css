@@ -1,0 +1,40 @@
+.headerContainer{
+    height: 118px;
+    background-color: #E4B062;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerImage {
+    width: 273px;
+    height: 63px;
+    margin-left: 41px;
+    margin-top: 27px;
+}
+
+.username {
+    display: flex;
+}
+
+.headerLogOutImage {
+    cursor: pointer;
+    margin-top: 31px;
+    margin-bottom: 31.18px;
+    margin-right: 34.92px;
+    color: red;
+}
+
+.headerUsernameText {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #000000;
+    margin-right: 61.16px;
+    margin-bottom: 15px;
+}
