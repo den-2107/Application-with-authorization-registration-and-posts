@@ -41,15 +41,22 @@ const Card = () => {
       return (<p>Loading...</p>)
 
     return (
-        <div className={styles.container}>
+        <div>
+          <div className={styles.container} >
           {posts.map(post => (
-            <div key={post.id}>
-              <img className={styles.userImage} alt='' src={photos.find(photo => photo.albumId === post.userId)?.url} />
-              <h1>{users.find(user => user.id === post.userId)?.name}</h1>
-              <h2>{post.title}</h2>
-              <p>{post.body}</p>
+            <div className={styles.card} key={post.id}>
+                <div className={styles.cardUserInfo}>
+                <img className={styles.cardUserImage} alt='' src={photos.find(photo => photo.albumId === post.userId)?.url} />
+                  <div className={styles.cardUserInfoText}>
+                  <p>Автор: {users.find(user => user.id === post.userId)?.name}</p>
+                  <p>Компания: Romaguera-Crona</p>                
+                  </div>
+              </div>
+              <p><b>Заголовок: </b>{post.title}</p>
+              <p><b>Пост: </b>{post.body}</p>
             </div>
-          ))}
+          ))}            
+          </div>
         </div>
       );
 };

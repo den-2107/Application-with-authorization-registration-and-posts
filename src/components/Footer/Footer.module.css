@@ -1,0 +1,7 @@
+.footerContainer{
+    height: 118px;
+    background-color: #E4B062;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

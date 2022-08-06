@@ -1,13 +1,43 @@
-.userImage {
+.cardUserImage {
     width: 150px;
     height: 150px;
 }
 
-.container{
+.card{
     width: 467px;
     height: 388px;
     background: #FFFFFF;
     border: 5px solid #27569C;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 50px;
+}
+
+.card:hover {
+    opacity: 0.8;    
+}
+
+
+.cardUserInfo{
+    display: flex;
+}
+
+.cardUserInfoText {
+    padding: 5px;
+}
+
+.cardUserInfoText p {
+    font-size: 16px;
+    font-weight: bold;
 }
